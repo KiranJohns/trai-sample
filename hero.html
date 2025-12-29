@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRAI Contracting</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --primary-blue: #0071e3;
+    --secondary-blue: #f5faff;
+    --text-dark: #1d1d1f;
+    --text-gray: #6e6e73;
+    --bg-light: #ffffff;
+    --bg-gray: #f5f5f7;
+    --border-light: #e5e7eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    letter-spacing: -0.015em;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.navbar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    padding: 0 24px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+nav a {
+    font-size: 14px;
+    color: var(--text-dark);
+    text-decoration: none;
+    margin-left: 32px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-blue);
+}
+
+/* HERO SECTION WITH BACKGROUND IMAGE */
+.hero {
+    position: relative;
+    padding-top: 120px;
+    padding-bottom: 100px;
+    text-align: center;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(240,247,255,0.92) 0%,
+            rgba(255,255,255,0.96) 60%
+        ),
+        url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=1600");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Optional subtle overlay for extra polish */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at center,
+        rgba(255,255,255,0.0) 0%,
+        rgba(255,255,255,0.35) 70%
+    );
+    pointer-events: none;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* HERO CONTENT */
+.hero-tag {
+    display: inline-block;
+    padding: 6px 16px;
+    background: var(--secondary-blue);
+    color: var(--primary-blue);
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: var(--text-gray);
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--primary-blue);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #005bb7;
+    transform: translateY(-2px);
+}
+
+/* HERO IMAGE CARD */
+.hero-image {
+    max-width: 1000px;
+    margin: 60px auto 0;
+    border-radius: 24px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    display: block;
+}
+
+/* GENERAL CONTAINER */
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    nav a {
+        margin-left: 16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="container">
+        <h1 class="logo">TRAI</h1>
+        <nav>
+            <a href="#">Solutions</a>
+            <a href="#">Projects</a>
+            <a href="#">About</a>
+            <a href="#" class="btn btn-primary" style="padding:8px 20px;font-size:13px;">Contact Us</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <span class="hero-tag">Qatar's Trusted Road Partner</span>
+        <h1>Road Infrastructure.<br>Intelligently Built.</h1>
+        <p>
+            TRAI Contracting delivers end-to-end solutions for road construction,
+            markings, and traffic management with a focus on durability and simplicity.
+        </p>
+        <a href="#" class="btn btn-primary">Start Your Project</a>
+
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1590486803833-ffc6f78f5372?auto=format&fit=crop&q=80&w=1200" alt="Modern Road Infrastructure">
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

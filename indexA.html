@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TRAI Contracting | Road Constructions Simplified</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #0071e3;
+            --secondary-blue: #f5faff;
+            --text-dark: #1d1d1f;
+            --text-gray: #6e6e73;
+            --bg-light: #ffffff;
+            --bg-gray: #f5f5f7;
+            --border-light: #e5e7eb;
+            --apple-glass: rgba(255, 255, 255, 0.7);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+            letter-spacing: -0.015em;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            overflow-x: hidden;
+            line-height: 1.5;
+        }
+
+        /* --- ANIMATIONS --- */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes morph {
+            0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; transform: translate(-50%, -50%) scale(1); }
+            50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; transform: translate(-50%, -40%) scale(1.1); }
+            100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; transform: translate(-50%, -50%) scale(1); }
+        }
+
+        /* --- NAVBAR --- */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: var(--apple-glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .navbar .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+            padding: 0 24px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        nav a {
+            font-size: 14px;
+            color: var(--text-dark);
+            text-decoration: none;
+            margin-left: 32px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover { color: var(--primary-blue); }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            position: relative;
+            padding-top: 160px;
+            padding-bottom: 100px;
+            text-align: center;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        /* The Lively Morphing Background Blob */
+        .hero-bg-blob {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(0, 113, 227, 0.1) 0%, rgba(240, 247, 255, 0) 70%);
+            filter: blur(80px);
+            z-index: 0;
+            animation: morph 12s ease-in-out infinite;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            padding: 6px 18px;
+            background: var(--secondary-blue);
+            color: var(--primary-blue);
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 15px rgba(0, 113, 227, 0.08);
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 84px);
+            font-weight: 800;
+            line-height: 1.05;
+            margin-bottom: 24px;
+            color: var(--text-dark);
+            background: linear-gradient(180deg, #1d1d1f 0%, #6e6e73 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: clamp(18px, 2vw, 22px);
+            color: var(--text-gray);
+            max-width: 750px;
+            margin: 0 auto 48px;
+        }
+
+        .hero-image {
+            max-width: 1060px;
+            margin: 40px auto 0;
+            border-radius: 32px;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.1);
+            overflow: hidden;
+            animation: float 6s ease-in-out infinite;
+            transition: 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+            cursor: pointer;
+        }
+
+        .hero-image:hover {
+            transform: scale(1.02) translateY(-10px);
+        }
+
+        .hero-image img {
+            width: 100%;
+            display: block;
+            transition: 0.8s ease;
+        }
+
+        /* --- BUTTONS --- */
+        .btn {
+            display: inline-block;
+            padding: 16px 36px;
+            border-radius: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-primary {
+            background: var(--primary-blue);
+            color: white;
+            box-shadow: 0 10px 20px rgba(0, 113, 227, 0.15);
+        }
+
+        .btn-primary:hover {
+            background: #005bb7;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 113, 227, 0.25);
+        }
+
+        /* --- BENTO GRID / SERVICES --- */
+        .section-padding { padding: 120px 24px; }
+        
+        .container { max-width: 1140px; margin: 0 auto; }
+
+        .section-header { text-align: center; margin-bottom: 80px; }
+        .section-header h2 { font-size: clamp(32px, 4vw, 48px); font-weight: 700; margin-bottom: 20px; }
+        .section-header p { color: var(--text-gray); font-size: 18px; max-width: 600px; margin: 0 auto; }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 28px;
+        }
+
+        .bento-card {
+            background: var(--bg-gray);
+            border-radius: 28px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid transparent;
+        }
+
+        .bento-card:hover {
+            background: #fff;
+            border-color: var(--border-light);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+            transform: translateY(-8px);
+        }
+
+        .bento-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 18px;
+            margin-bottom: 32px;
+        }
+
+        .bento-card h3 { font-size: 24px; margin-bottom: 12px; }
+        .bento-card p { color: var(--text-gray); font-size: 16px; flex-grow: 1; line-height: 1.6; }
+
+        .span-7 { grid-column: span 7; }
+        .span-5 { grid-column: span 5; }
+        .span-6 { grid-column: span 6; }
+
+        /* --- STATS SECTION --- */
+        .why-section { background: var(--secondary-blue); border-radius: 50px; margin: 0 24px; }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 48px;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .stat-card h3 { font-size: 56px; color: var(--primary-blue); margin-bottom: 10px; font-weight: 800; }
+        .stat-card p { font-weight: 500; color: var(--text-gray); }
+
+        /* --- FOOTER --- */
+        footer {
+            padding: 100px 24px 50px;
+            background: var(--bg-gray);
+            margin-top: 100px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 80px;
+        }
+
+        .footer-col h4 { margin-bottom: 24px; font-size: 16px; font-weight: 600; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 14px; font-size: 14px; color: var(--text-gray); cursor: pointer; transition: 0.3s; }
+        .footer-col li:hover { color: var(--primary-blue); }
+
+        @media (max-width: 900px) {
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .span-7, .span-5, .span-6 { grid-column: span 12; }
+            .why-section { margin: 0; border-radius: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="logo">TRAI</a>
+            <nav>
+                <a href="#">Solutions</a>
+                <a href="#">Infrastructure</a>
+                <a href="#">About</a>
+                <a href="#" class="btn btn-primary" style="padding: 10px 24px; font-size: 13px; border-radius: 8px;">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-bg-blob"></div>
+        <div class="container">
+            <span class="hero-tag" data-aos="fade-down" data-aos-duration="1000">
+                Qatar's Leading Infrastructure Partner
+            </span>
+            
+            <h1 data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                Road Infrastructure.<br>Intelligently Built.
+            </h1>
+            
+            <p data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+                We simplify the complex world of road construction, safety markings, and traffic management through integrated planning and durable execution.
+            </p>
+            
+            <div data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600">
+                <a href="#" class="btn btn-primary">Discuss Your Project</a>
+            </div>
+            
+            <div class="hero-image" data-aos="zoom-in-up" data-aos-duration="1500" data-aos-delay="800">
+                <img src="https://images.unsplash.com/photo-1590486803833-ffc6f78f5372?auto=format&fit=crop&q=80&w=1200" alt="Professional Road Construction">
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>The TRAI Ecosystem</h2>
+                <p>One integrated team. Multiple specialized solutions.</p>
+            </div>
+            
+            <div class="bento-grid">
+                <div class="bento-card span-7" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1533234432450-719548d6ca30?auto=format&fit=crop&q=80&w=800" alt="Asphalt Works">
+                    <h3>Civil & Road Construction</h3>
+                    <p>End-to-end asphalt milling, resurfacing, and full-depth reconstruction. Built for Qatar's unique climate and load demands.</p>
+                </div>
+
+                <div class="bento-card span-5" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=600" alt="Line Markings">
+                    <h3>Advanced Markings</h3>
+                    <p>High-visibility thermoplastic and 2K MMA markings that ensure safety across highways and industrial facilities.</p>
+                </div>
+
+                <div class="bento-card span-5" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1545459720-aac273a27b3d?auto=format&fit=crop&q=80&w=600" alt="Traffic Systems">
+                    <h3>Traffic Management</h3>
+                    <p>Strategic RO & TDP design, TMA rental, and full regulatory approvals for zero-disruption projects.</p>
+                </div>
+
+                <div class="bento-card span-7" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&q=80&w=800" alt="EV Charging Station">
+                    <h3>EV & Active Spaces</h3>
+                    <p>Future-ready surfacing for EV charging bays, cycling tracks, and sports courts using eco-friendly materials.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding why-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Uncompromising Standards</h2>
+                <p>Reliability measured in safety and performance.</p>
+            </div>
+
+            <div class="stats-container">
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+                    <h3>100%</h3>
+                    <p>Safety Compliance</p>
+                </div>
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+                    <h3>24/7</h3>
+                    <p>Operational Support</p>
+                </div>
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+                    <h3>Zero</h3>
+                    <p>Project Delays</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="text-align: center;">
+        <div class="container" data-aos="fade-up">
+            <h2 style="font-size: clamp(32px, 5vw, 56px); margin-bottom: 24px;">Let’s build something durable.</h2>
+            <p style="margin-bottom: 48px; color: var(--text-gray); font-size: 20px;">Contact TRAI Contracting for a detailed infrastructure consultation.</p>
+            <a href="#" class="btn btn-primary">Schedule a Meeting</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h2 class="logo" style="margin-bottom: 20px;">TRAI</h2>
+                    <p style="font-size: 14px; line-height: 1.8;">Simplifying road infrastructure through innovation, safety, and precision across the State of Qatar.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Specializations</h4>
+                    <ul>
+                        <li>Road Construction</li>
+                        <li>Line Markings</li>
+                        <li>Traffic Control</li>
+                        <li>Epoxy Flooring</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Industries</h4>
+                    <ul>
+                        <li>Aviation</li>
+                        <li>Defense</li>
+                        <li>Logistics</li>
+                        <li>Private Sector</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li>Doha, Qatar</li>
+                        <li>contact@trai.qa</li>
+                        <li>+974 4400 0000</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="border-top: 1px solid var(--border-light); padding-top: 30px; font-size: 13px; color: var(--text-gray); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+                <p>© 2025 TRAI Contracting. All rights reserved.</p>
+                <div style="display: flex; gap: 30px;">
+                    <span>Privacy Policy</span>
+                    <span>Terms of Service</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animate On Scroll
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 120,
+            easing: 'ease-in-out'
+        });
+    </script>
+</body>
+</html>

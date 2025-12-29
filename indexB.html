@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRAI Contracting | Road Constructions Simplified</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<style>
+:root {
+  --primary-blue: #0071e3;
+  --secondary-blue: #f5faff;
+  --text-dark: #1d1d1f;
+  --text-gray: #6e6e73;
+  --bg-light: #ffffff;
+  --bg-gray: #f5f5f7;
+  --border-light: #e5e7eb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  letter-spacing: -0.015em;
+}
+
+body {
+  background: var(--bg-light);
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.navbar .container {
+  max-width: 1200px;
+  margin: auto;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary-blue);
+}
+
+nav a {
+  margin-left: 32px;
+  text-decoration: none;
+  color: var(--text-dark);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+nav a:hover { color: var(--primary-blue); }
+
+/* ================= HERO ================= */
+.hero {
+  position: relative;
+  padding: 140px 24px 100px;
+  background: linear-gradient(180deg,#f0f7ff 0%,#ffffff 100%);
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Animated gradient glow */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: -30%;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle,
+    rgba(0,113,227,0.18),
+    rgba(0,113,227,0.06),
+    transparent 70%);
+  animation: heroGlow 14s ease-in-out infinite;
+}
+
+@keyframes heroGlow {
+  0% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(160px,100px) scale(1.1); }
+  100% { transform: translate(0,0) scale(1); }
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.hero-tag {
+  display: inline-block;
+  padding: 6px 18px;
+  background: var(--secondary-blue);
+  color: var(--primary-blue);
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 28px;
+}
+
+.hero h1 {
+  font-size: clamp(42px,6vw,72px);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  animation: textPop 1.2s cubic-bezier(.2,.8,.2,1) both;
+}
+
+@keyframes textPop {
+  from { opacity: 0; transform: translateY(24px) scale(.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.hero p {
+  font-size: 20px;
+  color: var(--text-gray);
+  max-width: 720px;
+  margin: 0 auto 42px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.btn-primary {
+  background: var(--primary-blue);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #005bb7;
+  transform: translateY(-2px);
+}
+
+/* Floating hero image */
+.hero-image {
+  margin-top: 70px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+  animation: heroFloat 8s ease-in-out infinite;
+}
+
+@keyframes heroFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+  100% { transform: translateY(0); }
+}
+
+.hero-image img {
+  width: 100%;
+  display: block;
+}
+
+/* ================= SECTIONS ================= */
+.section-padding { padding: 100px 24px; }
+.container { max-width: 1140px; margin: auto; }
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.section-header p {
+  color: var(--text-gray);
+  font-size: 18px;
+}
+
+/* ================= BENTO GRID ================= */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  gap: 24px;
+}
+
+.bento-card {
+  background: var(--bg-gray);
+  border-radius: 24px;
+  padding: 32px;
+  transition: .4s cubic-bezier(.4,0,.2,1);
+}
+
+.bento-card:hover {
+  background: white;
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,.06);
+}
+
+.bento-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.bento-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.bento-card p {
+  font-size: 15px;
+  color: var(--text-gray);
+}
+
+.span-8 { grid-column: span 8; }
+.span-4 { grid-column: span 4; }
+
+/* ================= WHY SECTION ================= */
+.why-section {
+  background: var(--secondary-blue);
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.stat-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.stat-card h3 {
+  font-size: 48px;
+  color: var(--primary-blue);
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: var(--bg-gray);
+  padding: 80px 24px 40px;
+  border-top: 1px solid var(--border-light);
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:900px){
+  .span-4,.span-8 { grid-column: span 12; }
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="container">
+    <h1 class="logo">TRAI</h1>
+    <nav>
+      <a href="#">Solutions</a>
+      <a href="#">Projects</a>
+      <a href="#">About</a>
+      <a href="#" class="btn btn-primary" style="padding:8px 20px;font-size:13px;">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <span class="hero-tag" data-aos="fade-down">Qatar's Trusted Road Partner</span>
+    <h1>Road Infrastructure.<br>Intelligently Built.</h1>
+    <p data-aos="fade-up" data-aos-delay="100">
+      End-to-end solutions for road construction, safety markings and traffic management.
+    </p>
+    <a href="#" class="btn btn-primary" data-aos="fade-up" data-aos-delay="200">Start Your Project</a>
+
+    <div class="hero-image" data-aos="zoom-in" data-aos-delay="300">
+      <img src="https://images.unsplash.com/photo-1590486803833-ffc6f78f5372?auto=format&fit=crop&w=1400&q=80">
+    </div>
+  </div>
+</section>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({
+  duration: 800,
+  once: true,
+  offset: 100
+});
+</script>
+
+</body>
+</html>

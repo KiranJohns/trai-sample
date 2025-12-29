@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TRAI | Road Constructions Simplified</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <style>
+        /* BASE */
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+body { background: #fff; color: #1a1a1a; }
+
+a { text-decoration: none; color: inherit; }
+
+/* NAV */
+.navbar {
+  position: fixed; width: 100%; top:0; left:0;
+  background: #fff; border-bottom: 1px solid #ddd;
+  z-index: 1000;
+}
+.navbar .container {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px 0;
+}
+.logo { font-size: 24px; font-weight: 700; }
+nav a { margin-left: 24px; font-weight: 600; }
+
+/* HERO */
+.hero {
+  height: 100vh; background-size: cover;
+  background-position: center; display: flex;
+  justify-content: center; align-items: center;
+  text-align: center; padding: 0 20px;
+}
+.hero-title {
+  font-size: 62px; line-height: 1.1;
+  color: #fff; font-weight: 700;
+}
+.hero-title span { color: #38bdf8; }
+.hero-sub {
+  margin-top: 20px; font-size: 20px; color: #e0e7ff;
+}
+.btn-hero {
+  display: inline-block; margin-top: 30px;
+  background: #38bdf8; color: #001029;
+  padding: 16px 32px; border-radius: 8px;
+  font-weight: 700; transition: 0.3s;
+}
+.btn-hero:hover { background: #22c0ff; }
+
+/* SERVICES PREVIEW */
+.services {
+  padding: 100px 0; background: #f7f8fa;
+}
+.services .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 40px; text-align: center;
+}
+.service-item img {
+  width: 100%; border-radius: 12px;
+}
+.service-item h3 { margin: 18px 0 8px; font-size: 22px; }
+.service-item p { font-size: 16px; color: #555; }
+
+/* APPROACH */
+.approach {
+  padding: 100px 0;
+}
+.section-title { font-size: 32px; text-align: center; margin-bottom: 12px; }
+.section-sub { text-align: center; color: #444; margin-bottom: 40px; }
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 28px;
+}
+.approach-grid div h4 { font-size: 20px; margin-bottom: 8px; }
+
+/* CTA */
+.cta {
+  padding: 80px 20px; text-align: center;
+  background: #001029; color: #fff;
+}
+.cta h2 { font-size: 30px; margin-bottom: 20px; }
+
+/* FOOTER */
+.footer {
+  padding: 28px; text-align: center;
+  background: #020617; color: #888;
+}
+
+/* ANIMATIONS */
+.section-anim {
+  opacity: 0; transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.section-visible {
+  opacity: 1; transform: translateY(0);
+}
+
+    </style>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">TRAI</h1>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero section-anim" style="background-image:url('assets/hero-bg.jpg')">
+    <div class="hero-inner">
+      <h1 class="hero-title">ROAD CONSTRUCTIONS<br><span>SIMPLIFIED</span></h1>
+      <p class="hero-sub">End-to-end road infrastructure — built durable, safe and seamless in Qatar</p>
+      <a href="#services" class="btn-hero">Explore Services</a>
+    </div>
+  </section>
+
+  <!-- SERVICES PREVIEW -->
+  <section id="services" class="services preview section-anim">
+    <div class="container">
+      <div class="service-item">
+        <img src="assets/road1.jpg" alt="Road Construction">
+        <h3>Road Construction</h3>
+        <p>Asphalt milling, resurfacing, kerbstone & interlock installation.</p>
+      </div>
+      <div class="service-item">
+        <img src="assets/marking.jpg" alt="Road Markings">
+        <h3>Road Markings</h3>
+        <p>Thermoplastic, 2K MMA & Cold paint — clear, visible & durable.</p>
+      </div>
+      <div class="service-item">
+        <img src="assets/traffic.jpg" alt="Traffic Management">
+        <h3>Traffic Management</h3>
+        <p>RO & TDP design, approvals, TMA rental.</p>
+      </div>
+      <div class="service-item">
+        <img src="assets/ev.jpg" alt="EV & Active Spaces">
+        <h3>EV & Active Spaces</h3>
+        <p>Charging bays, courts, jogging & cycle tracks.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROACH -->
+  <section id="approach" class="approach section-anim">
+    <div class="container">
+      <h2 class="section-title">Our Approach</h2>
+      <p class="section-sub">
+        Simple, integrated solutions — one team, one standard, one seamless delivery.
+      </p>
+
+      <div class="approach-grid">
+        <div>
+          <h4>Coordinated Delivery</h4><p>One contractor from milling to marking.</p>
+        </div>
+        <div>
+          <h4>Safety First</h4><p>Design-led traffic management & TMA protection.</p>
+        </div>
+        <div>
+          <h4>Durability</h4><p>Engineered for long service life and performance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta section-anim">
+    <div class="container">
+      <h2>Ready to Build with TRAI?</h2>
+      <a href="#contact" class="btn-hero">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="footer">
+    <p>© 2025 TRAI Contracting | Qatar</p>
+  </footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>
