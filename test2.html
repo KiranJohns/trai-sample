@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .expertise-section {
+  padding: 120px 60px;
+  background: #ffffff;
+}
+
+.expertise-header {
+  max-width: 800px;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.expertise-header .badge {
+  display: inline-block;
+  background: #fff4dc;
+  color: #f5b728;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.expertise-header h2 {
+  font-size: clamp(36px, 4vw, 48px);
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: #0f172a;
+}
+
+.expertise-header h2 span {
+  color: #EC9220;
+}
+
+.expertise-header p {
+  font-size: 16px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* GRID */
+.expertise-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* CARD */
+.expertise-card {
+  background: linear-gradient(135deg, #f8f8f8, #ededed);
+  border-radius: 20px;
+  padding: 32px;
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.expertise-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    rgba(245,183,40,0.15),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.expertise-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+}
+
+.expertise-card:hover::after {
+  opacity: 1;
+}
+
+/* ICON */
+.card-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #fbdc92;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+  transition: transform 0.4s ease;
+}
+
+.expertise-card:hover .card-icon {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+/* TEXT */
+.expertise-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #0f172a;
+}
+
+.expertise-card p {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.expertise-card ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.expertise-card ul li {
+  font-size: 13px;
+  color: #0f172a;
+  margin-bottom: 8px;
+  padding-left: 18px;
+  position: relative;
+}
+
+.expertise-card ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #f5b728;
+  font-size: 18px;
+}
+
+.expertise-card a {
+  font-size: 14px;
+  font-weight: 600;
+  color: #f5b728;
+  text-decoration: none;
+}
+
+/* SECOND ROW CENTERING */
+.expertise-grid > :nth-child(4) {
+  grid-column: 1 / 2;
+}
+
+.expertise-grid > :nth-child(5) {
+  grid-column: 2 / 3;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .expertise-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .expertise-grid > * {
+    grid-column: auto !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .expertise-section {
+    padding: 80px 24px;
+  }
+}
+    </style>
+    <section class="expertise-section">
+  <div class="expertise-header">
+    <!-- <span class="badge">Our Expertise</span> -->
+    <h2>Our<span> Services</span></h2>
+    <p>
+      From precision engineered road construction to high performance
+      markings, we handle every detail of your infrastructure needs.
+    </p>
+  </div>
+
+  <div class="expertise-grid">
+
+    <!-- CARD 1 -->
+    <div class="expertise-card">
+      <div class="card-icon">🚜</div>
+      <h3>Road Construction</h3>
+      <p>
+        Road milling and asphalt laying give clients a complete solution
+        for renewing, resurfacing and upgrading roads.
+      </p>
+      <ul>
+        <li>Precise correction of levels and drainage</li>
+        <li>Smoother, safer ride quality with high standards</li>
+        <li>Life extension by renewing only worn surfaces</li>
+      </ul>
+      <a href="#">Learn More →</a>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="expertise-card highlight">
+      <div class="card-icon">🛣️</div>
+      <h3>Road Marking</h3>
+      <p>
+        Lines that lead the way. Clear, long-lasting markings are
+        critical for safe navigation on any network.
+      </p>
+      <ul>
+        <li>Maximum safety and visibility day & night</li>
+        <li>Hot-applied thermoplastic for high traffic</li>
+        <li>2K MMA for stress intersections & roundabouts</li>
+      </ul>
+      <a href="#">Learn More →</a>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="expertise-card">
+      <div class="card-icon">🚦</div>
+      <h3>Traffic Management</h3>
+      <p>
+        Well-planned traffic management protects people, assets and
+        programs whenever works take place.
+      </p>
+      <ul>
+        <li>Authority approved RO & TDP designs</li>
+        <li>Certified TMA rental for work zones</li>
+        <li>End-to-end traffic diversion planning</li>
+      </ul>
+      <a href="#">Learn More →</a>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="expertise-card">
+      <div class="card-icon">⚡</div>
+      <h3>Charging & Active Spaces</h3>
+      <p>
+        Powering mobility and shaping communities with EV charging
+        and active pedestrian corridors.
+      </p>
+      <ul>
+        <li>Civil works for EV charging stations</li>
+        <li>High-visibility EV bay colouring</li>
+        <li>Multipurpose sports flooring systems</li>
+      </ul>
+      <a href="#">Learn More →</a>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="expertise-card">
+      <div class="card-icon">🧱</div>
+      <h3>Epoxy Flooring</h3>
+      <p>
+        Transforming concrete surfaces into seamless, high-performance
+        floors built for demanding environments.
+      </p>
+      <ul>
+        <li>High durability for heavy machinery</li>
+        <li>Chemical & stain resistance</li>
+        <li>Seamless, hygienic, non-porous finish</li>
+      </ul>
+      <a href="#">Learn More →</a>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>

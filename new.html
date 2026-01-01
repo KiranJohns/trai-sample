@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAI Contracting - Total Roads and Infrastructure</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav {
+            background-color: #34495e;
+            padding: 0.5rem 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav li {
+            margin: 0 1rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        nav a:hover {
+            background-color: #2c3e50;
+            border-radius: 4px;
+            transform: translateY(-2px);
+        }
+        .hero {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://plus.unsplash.com/premium_photo-1664635402285-536a9bf3243a?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cm9hZCUyMGluZnJhc3RydWN0dXJlfGVufDB8fDB8fHww');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 6rem 2rem;
+            position: relative;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        .hero .quote {
+            font-style: italic;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        section {
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        section:hover {
+            transform: translateY(-5px);
+        }
+        .section-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+            margin-bottom: 2rem;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        ul li:before {
+            content: "✓";
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        .benefit-item {
+            background: linear-gradient(135deg, #ecf0f1, #bdc3c7);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: box-shadow 0.3s;
+        }
+        .benefit-item:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            section {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TRAI Contracting</h1>
+        <p>Total Roads and Infrastructure</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#road-construction">Road Construction</a></li>
+            <li><a href="#road-marking">Road Marking</a></li>
+            <li><a href="#marking-removal">Marking Removal</a></li>
+            <li><a href="#traffic-management">Traffic Management</a></li>
+            <li><a href="#charging-spaces">Charging & Active Spaces</a></li>
+            <li><a href="#epoxy">Epoxy Flooring</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="overview">
+        <h1>ROAD CONSTRUCTIONS SIMPLIFIED</h1>
+        <p class="quote">“In this era of complexity, one of the most powerful ways we can add value to our business is through simplicity” – Lisa Bodell</p>
+        <p>TRAI - Combat unnecessary complexity, Clearer Vision, & Process made Easier – Let’s make it simple</p>
+    </section>
+
+    <section id="overview">
+        <img src="https://plus.unsplash.com/premium_photo-1664635402285-536a9bf3243a?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cm9hZCUyMGluZnJhc3RydWN0dXJlfGVufDB8fDB8fHww" alt="Road Infrastructure" class="section-image">
+        <h2>TRAI Overview</h2>
+        <p>TRAI Contracting – Total Roads and Infrastructure – delivers smart, durable and safe solutions across the full road and public-realm lifecycle, from construction and markings to traffic management, EV Charging Bays, Sports flooring and Epoxy systems. TRAI Contracting gives clients a single expert partner from asphalt milling to final road markings, so highways, airports, defense zones and private developments all benefit from one integrated team that understands the full pavement structure and the finishing details that guide every driver, pilot and pedestrian.</p>
+        <p>TRAI Contracting delivers a complete, “end-to-line” solution – from precision-engineered road construction to high-performance markings – so every project looks professional, performs safely and stays easy to maintain. By contacting TRAI, clients get one specialist team, one programme and one standard of professionalism – simple, coordinated solutions for any asphalt or concrete surface that needs to be built, protected and clearly marked.</p>
+        <p>Dedicated, well-trained crews know how to select and combine these systems, recommending the right material for each zone so clients get the best balance of safety, durability and cost. TRAI’s professional project management ensures simple, coordinated delivery from blacktop to bright markings – one team, one programme, one quality standard, wherever asphalt or concrete needs to be seen, understood and trusted.</p>
+    </section>
+
+    <section id="road-construction">
+        <img src="https://images.unsplash.com/photo-1503708928676-1cb796a0891e?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cm9hZCUyMGNvbnN0cnVjdGlvbnxlbnwwfHwwfHx8MA%3D%3D" alt="Road Construction" class="section-image">
+        <h2>1. Road Construction</h2>
+        <p><strong>Title: “Built-to-Last Roads, End-to-End”</strong></p>
+        <p>Road milling and asphalt laying from TRAI give clients a complete solution for renewing, resurfacing and upgrading roads with minimal disruption and long-term performance in mind. This applies whether the project involves profiling the existing surface and overlaying, or fully removing old damaged asphalt and installing a brand-new pavement structure.</p>
+        
+        <h3>Integrated milling and resurfacing benefits</h3>
+        <div class="benefits">
+            <div class="benefit-item">
+                <ul>
+                    <li>Precise correction of levels and drainage</li>
+                    <li>Controlled milling removes only the required depth, allowing TRAI to correct crossfalls, eliminate ruts and restore proper water run-off so roads drain efficiently and last longer.</li>
+                </ul>
+            </div>
+            <div class="benefit-item">
+                <ul>
+                    <li>Smoother, safer ride quality</li>
+                    <li>Careful profiling followed by high-standard asphalt laying delivers a uniform, even surface that improves vehicle comfort, reduces splash and spray, and enhances skid resistance for all road users.</li>
+                </ul>
+            </div>
+            <div class="benefit-item">
+                <ul>
+                    <li>Life extension of existing pavements</li>
+                    <li>By keeping the sound base layers and renewing only the worn surface, TRAI can significantly extend pavement life without the cost and time of full reconstruction.</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>Full removal and new asphalt construction benefits</h3>
+        <div class="benefits">
+            <div class="benefit-item">
+                <ul>
+                    <li>Complete renewal of failed surfaces</li>
+                    <li>Where asphalt is badly cracked, deformed or patched, removing the old layer and replacing it with new mix eliminates underlying defects instead of simply hiding them.</li>
+                </ul>
+            </div>
+            <div class="benefit-item">
+                <ul>
+                    <li>Opportunity to upgrade design and materials</li>
+                    <li>Reconstruction allows TRAI to adjust layer thicknesses, choose more durable mixes and incorporate additives or recycled content that improve long-term performance and sustainability.</li>
+                </ul>
+            </div>
+            <div class="benefit-item">
+                <ul>
+                    <li>Cleaner appearance and better asset value</li>
+                    <li>Fresh, uniform asphalt with crisp edges and markings immediately lifts the visual quality of roads, car parks and access routes, improving the perceived value of the whole development.</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>Shared benefits when choosing TRAI</h3>
+        <ul>
+            <li>Reduced disruption and faster programs</li>
+            <li>Combining milling and paving in a coordinated operation shortens closure times and phasing, helping clients keep traffic flowing and businesses accessible during works.</li>
+            <li>Cost-effective, sustainable solution</li>
+            <li>Milled material can be processed for reuse in new asphalt, reducing waste and material costs while supporting environmental targets.</li>
+            <li>Single specialist responsible for quality</li>
+            <li>Using TRAI for both removal and new laying gives clients one accountable partner for design levels, mix selection, compaction and finish, simplifying communication and aftercare.</li>
+        </ul>
+
+        <h3>Kerbstone and interlock installation - Key Benefits</h3>
+        <p>Kerbstone and interlock installation from TRAI completes the road construction story by combining structural control with a high-quality architectural finish around the carriageway. Clients get edges, pavements and paved areas that are aligned to design levels, built for heavy use and visually consistent with the rest of the project.</p>
+        <div class="benefits">
+            <div class="benefit-item">
+                <ul>
+                    <li>Engineered edges for safer roads</li>
+                    <li>Kerbstones are set to precise lines and levels, helping to contain the pavement, protect verges and manage surface water so the asphalt performs as designed. Strong, correctly founded kerbs also guide drivers and define safe pedestrian areas, improving overall road safety and legibility.</li>
+                </ul>
+            </div>
+            <div class="benefit-item">
+                <ul>
+                    <li>Durable, flexible interlock pavements</li>
+                    <li>Interlocking blocks distribute loads across many units, creating a robust surface that resists cracking and rutting under traffic and temperature changes. Individual units can be lifted and replaced if services need access or local damage occurs, making maintenance faster and more economical than full-depth repairs.</li>
+                </ul>
+            </div>
+            <div class="benefit-item">
+                <ul>
+                    <li>Premium visual finish and place-making</li>
+                    <li>A wide choice of block colours, textures and patterns allows TRAI to align pavements, medians, plazas and parking bays with the client’s landscape and branding vision. Clean kerb lines and well-cut interlock patterns give projects a polished, “finished” look that enhances curb appeal and the perceived value of the entire development.</li>
+                </ul>
+            </div>
+            <div class="benefit-item">
+                <ul>
+                    <li>Integrated with the full road build</li>
+                    <li>Because TRAI manages milling, asphalt laying, kerbs and interlock together, levels, joints and transitions are coordinated from the outset, avoiding ponding, trip lips and awkward steps. One experienced road contractor taking responsibility for the whole cross-section means smoother delivery, fewer interface issues and long-term performance that matches the design intent.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="road-marking">
+        <img src="https://plus.unsplash.com/premium_photo-1664547606181-8bb867e9c668?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cm9hZCUyMG1hcmtpbmd8ZW58MHx8MHx8fDA%3D" alt="Road Marking" class="section-image">
+        <h2>2. Road Marking Application</h2>
+        <p><strong>Title: “Lines That Lead the Way”</strong></p>
+        <p>Clear, long-lasting markings are critical for safe, intuitive navigation on any network. TRAI Contracting specifies and applies the right marking system for each site, balancing durability, visibility, cost and environmental performance.</p>
+        <ul>
+            <li>Thermoplastic road markings: Thermoplastic markings offer exceptional life and reflectivity on heavily trafficked roads and highways. Glass beads and anti-skid aggregates can be incorporated to maximize night-time visibility and braking performance in wet conditions.</li>
+            <li>2K MMA (cold plastic) systems: Cold plastic MMA markings are used in high-stress areas such as intersections, roundabouts, bus lanes and cycle routes where superior strength is needed. Their high film thickness, colour stability and skid resistance provide reliable performance even under aggressive braking and turning.</li>
+            <li>Cold paint and specialist line marking: Cold-applied paints are ideal for car parks, airports, logistics yards and sports areas that require fast application and minimal downtime. Using advanced spray equipment, layouts are set out and applied with precision to optimize space and traffic flow.</li>
+        </ul>
+
+        <h3>Thermoplastic Marking – Key Benefits</h3>
+        <p>Hot Applied Road Marking (Thermoplastic Road Marking or Pavement Marking) from TRAI completes the road construction story by pairing a high-quality surface with long-life, high-visibility guidance for every road user. It is ideal for highways, city streets, car parks and special zones where safety, durability and professional presentation matter most.</p>
+        <div class="benefits">
+            <div class="benefit-item">
+                <ul>
+                    <li>Maximum safety and visibility</li>
+                    <li>Thick, reflective thermoplastic lines and symbols stand out in day, night and wet conditions, giving drivers more time to see lanes, crossings and warnings and react safely. Retroreflective glass beads and optional profiled markings enhance night-time guidance and can create rumble effects that encourage drivers to slow down in critical areas.</li>
+                </ul>
+            </div>
+            <div class="benefit-item">
+                <ul>
+                    <li>Long-lasting, low-maintenance markings</li>
+                    <li>Hot-applied thermoplastic bonds strongly to asphalt and primed concrete, forming a robust layer that resists wear from heavy traffic, braking and extreme weather far better than conventional paint. This extended service life reduces the frequency of remarking, cutting future maintenance costs and limiting the need for repeated traffic closures.</li>
+                </ul>
+            </div>
+            <div class="benefit-item">
+                <ul>
+                    <li>Fast application, less disruption</li>
+                    <li>Once applied at the correct temperature, thermoplastic cools and hardens within minutes, allowing roads to reopen quickly and keeping disruption to residents, businesses and through-traffic to a minimum.</li>
+                </ul>
+            </div>
+            <div class="benefit-item">
+                <ul>
+                    <li>Versatile layouts for any project</li>
+                    <li>The material can be used for center and edge lines, arrows, symbols, speed roundels, crossings, cycle lanes, bus lanes, parking bays and traffic-calming features, giving TRAI the flexibility to deliver complete pavement marking packages on complex schemes.</li>
+                </ul>
+            </div>
+            <div class="benefit-item">
+                <ul>
+                    <li>End-to-end professionalism from a road specialist</li>
+                    <li>Because TRAI also handles milling, asphalt laying, kerbs and interlock, levels and layouts are coordinated so markings sit exactly where designers intended—clear of joints, ponding and defects. This integrated road construction expertise means clients get crisp, accurate, regulation-compliant markings that look professional from day one and continue to perform throughout the life of the pavement.</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>2K MMA (Cold Plastic) Marking – Key Benefits</h3>
+        <p>2K MMA (cold plastic) markings from TRAI provide ultra-durable, high-visibility guidance in the most demanding locations, backed by full road-construction expertise and specialist product training. This service is ideal for junctions, roundabouts, crossings, bus and cycle lanes, high-traffic approaches and any area where conventional paint wears out too quickly.</p>
+        <div class="benefits">
+            <div class="benefit-item">
+                <h4>Performance and safety benefits</h4>
+                <ul>
+                    <li>Exceptional mechanical strength and abrasion resistance mean 2K MMA withstands intense braking, turning and channelized traffic where thermoplastic or paint would wear rapidly.</li>
+                    <li>High film-build, texture and skid resistance improve tire grip in wet and dry conditions, supporting safer stopping distances for vehicles, cyclists and pedestrians.</li>
+                    <li>Strong colour stability and retro-reflectivity keep markings bright and legible for longer, helping drivers read lanes, arrows and symbols clearly at night and in poor weather.</li>
+                    <li>Cold-cure chemistry allows application in a wider range of temperatures than hot-applied systems, supporting reliable programs and shorter closures throughout the year.</li>
+                </ul>
+            </div>
+            <div class="benefit-item">
+                <ul>
+                    <li>Exceptional mechanical strength and abrasion resistance, ideal for stress areas such as roundabouts, intersections, bus lanes and braking zones.</li>
+                    <li>Very high durability in harsh climates, maintaining colour, thickness and clarity under heavy tires, heat and UV exposure.</li>
+                    <li>Fast chemical curing at a wide range of temperatures, enabling application in cooler conditions and reducing downtime.</li>
+                    <li>Outstanding colour stability and retro-reflectivity, keeping markings bright and readable for longer periods.</li>
+                    <li>Superior skid resistance due to high-build thickness and embedded aggregates, improving safety for vehicles, cyclists and pedestrians.</li>
+                    <li>Flexible design options: can be textured, profiled, multi-coloured or inlayed to create rumble effects, cycle lanes, logos and safety zones.</li>
+                    <li>Lower maintenance frequency compared with standard paints, making it attractive for asset owners focused on whole-life performance.</li>
+                </ul>
+            </div>
+        </div>
+        <p><strong>Integrated with TRAI’s road construction expertise</strong></p>
+        <ul>
+            <li>Because TRAI also handles milling, asphalt laying, kerbs and interlock, the substrate is prepared to the correct profile, texture and cleanliness before 2K MMA is installed.</li>
+            <li>Markings are designed and set out in line with geometry, drainage and traffic-flow requirements, ensuring they sit in the right place relative to lanes, crossings and kerb lines.</li>
+            <li>This whole-of-road approach gives clients consistent quality from base build to final markings, rather than fragmented responsibility across multiple contractors.</li>
+        </ul>
+        <p><strong>Specialist manufacturer support and market edge</strong></p>
+        <ul>
+            <li>TRAI works with dedicated 2K MMA manufacturers, using products that are specifically engineered for heavy-duty road, junction and cycle-facility applications.</li>
+            <li>Application teams receive direct training and certification on mixing ratios, layer thickness, curing behaviour and detailing techniques, ensuring the system performs as designed.</li>
+            <li>Manufacturer-backed specifications, method statements and test data give clients confidence in durability, skid resistance and colour performance when approving designs.</li>
+            <li>This combination of trained applicators, proven MMA systems and full road construction capability gives TRAI a clear edge in the market, delivering premium markings that last longer, look better and reduce whole life maintenance needs.</li>
+        </ul>
+    </section>
+
+    <section id="marking-removal">
+        <img src="https://images.unsplash.com/photo-1591486085897-f433f05e7aed?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cm9hZCUyMGNvbnN0cnVjdGlvbnxlbnwwfHwwfHx8MA%3D%3D" alt="Road Marking Removal" class="section-image">
+        <h2>3. Road Marking Removal</h2>
+        <p><strong>Title: “Restore the Lines That Lead the Way”</strong></p>
+        <p>Road marking removal from TRAI restores clarity and safety to busy networks while protecting the pavement and preparing it perfectly for new layouts. With a full road-construction background, TRAI aligns removal methods with asphalt, concrete and interlock conditions so the surface, drainage and future markings all perform as intended.</p>
+        <h3>Road Marking Removal – Key Benefits</h3>
+        <ul>
+            <li>Removing old or incorrect markings is essential for safety, clarity and compliance on modern road networks. Professional road marking removal prepares the surface for new layouts while protecting the pavement and road users.</li>
+            <li>Eliminates obsolete or misleading lines that can confuse drivers and increase accident risk, especially where layouts have changed.</li>
+            <li>Restores visual clarity, preventing “ghost lines” so new markings stand out clearly in all weather and lighting conditions.</li>
+            <li>Prepares the surface for fresh markings or resurfacing, helping new systems bond properly and last longer.</li>
+            <li>Supports compliance with updated designs, regulations and traffic orders, reducing liability for asset owners and operators.</li>
+            <li>Uses targeted techniques (such as grinding or water blasting) selected to remove markings efficiently while minimizing damage to asphalt or concrete.</li>
+            <li>Improves the overall appearance of roads, car parks and yards, contributing to a cleaner, more professional public realm.</li>
+        </ul>
+    </section>
+
+    <section id="traffic-management">
+        <img src="https://plus.unsplash.com/premium_photo-1721830791498-ec809d9d94ec?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dHJhZmZpYyUyMG1hbmFnZW1lbnR8ZW58MHx8MHx8fDA%3D" alt="Traffic Management" class="section-image">
+        <h2>4. RO & TDP Design, Traffic Management & TMA</h2>
+        <p><strong>Title: “Safe Works, Flowing Traffic”</strong></p>
+        <p>Well-planned traffic management protects people, assets and programs whenever works take place on live networks. TRAI Contracting offers a complete service from early design and authority approvals to fully managed solutions on site.</p>
+        <ul>
+            <li><strong>RO & TDP design and approval</strong>: Experienced planners prepare Road Opening (RO) and Traffic Diversion Plan (TDP) submissions that meet authority standards and local regulations. Layouts are engineered to maintain capacity, safeguard vulnerable users and keep emergency access clear while works progress.</li>
+            <li><strong>End-to-end traffic management services</strong>: Temporary signs, signals, barriers and lane closures are designed, installed and monitored by trained operatives working to recognized safety schemes. Continuous supervision and inspection ensure that arrangements remain effective as traffic patterns and site conditions change.</li>
+            <li><strong>TMA (Truck-Mounted Attenuator) rental</strong>: For high-risk locations, TRAI Contracting provides impact protection vehicles fitted with certified attenuator systems. These mobile crash cushions reduce the forces in the event of a collision, shielding both work crews and road users.</li>
+            <li><strong>Events, utilities and emergency works</strong>: Rapid-response teams support short-notice interventions for utilities, incident response and special events, minimizing disruption to the public. Integrated communication with clients, authorities and stakeholders helps deliver safe, predictable outcomes on every operation.</li>
+        </ul>
+
+        <h3>Road Opening (RO) - Key Benefits</h3>
+        <ul>
+            <li>Ensures legal compliance by formally authorizing who can open the road, where, when and for how long, reducing regulatory and liability risk.</li>
+            <li>Improves safety for workers, drivers and pedestrians by requiring approved traffic management layouts, signage and protection before works begin.</li>
+            <li>Protects the road asset by specifying reinstatement standards, so trenches and patches are restored to a quality that preserves pavement life.</li>
+            <li>Minimizes disruption through clear timing, phasing and coordination with other utilities or projects, helping to avoid repeated works in the same location.</li>
+            <li>Provides traceability and accountability, with records of the party responsible for the opening and the condition in which the carriageway was handed back.</li>
+        </ul>
+
+        <h3>TDP Design & Approval - Key Benefits</h3>
+        <ul>
+            <li>Enhances safety by carefully planning lane closures, diversions, crossings and signage to reduce conflict points and crash risk.</li>
+            <li>Reduces congestion and delay through optimized routes, phasing and signal timings, keeping journey times as short and reliable as possible.</li>
+            <li>Protects vulnerable users by incorporating safe walking and cycling routes, clear crossings and speed management in affected areas.</li>
+            <li>Supports regulatory compliance and faster approvals by documenting that the design follows recognized road-safety and traffic-engineering standards.</li>
+            <li>Improves communication and coordination between contractors, utilities and authorities, helping to avoid clashes between projects and repeated disruptions.</li>
+            <li>Delivers better community outcomes by minimizing noise, pollution and access issues while maintaining reliable access to homes, businesses and emergency services.</li>
+        </ul>
+
+        <h3>Renting Truck-Mounted Attenuators (TMAs) - Key Benefits</h3>
+        <ul>
+            <li>Enhanced worker and driver safety by placing an energy-absorbing crash cushion between live traffic and the work crew, significantly reducing the severity of rear-end impacts.</li>
+            <li>Compliance with modern work-zone safety standards by using properly specified, tested and professionally set-up TMA units on high-speed or high-risk roads.</li>
+            <li>Lower upfront costs compared with purchasing dedicated TMA trucks, with flexible rental terms that match project duration and budget.</li>
+            <li>Reduced downtime and maintenance risk, as TRAI manages inspections, servicing and post-impact checks so clients always receive road-ready equipment.</li>
+            <li>Operational flexibility to move protection between jobs and locations, ideal for mobile lane closures, striping, sweeping and other moving operations.</li>
+            <li>Protection of valuable equipment and work vehicles ahead of the TMA, helping to limit property damage and associated repair or delay costs in the event of a collision.</li>
+        </ul>
+    </section>
+
+    <section id="charging-spaces">
+        <img src="https://plus.unsplash.com/premium_photo-1661963979733-4f39ac603294?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZXYlMjBjaGFyZ2VyfGVufDB8fDB8fHww" alt="EV Charging" class="section-image">
+        <h2>5. Charging & Active Spaces</h2>
+        <p><strong>Title: “Powering Mobility, Shaping Communities”</strong></p>
+        <p>TRAI Contracting helps cities, developers and operators deliver cleaner transport and more active public spaces. Civil, electrical-ready and surfacing works are coordinated to create attractive, future-proof environments for people and vehicles.</p>
+        <ul>
+            <li>EV charging station civil works: Foundations, ducting, cable trenches and plinths are constructed to suit a wide range of charging technologies and capacities. Bays are marked, surfaced and finished with clear signage and wayfinding to optimize turnover and user experience.</li>
+            <li>Multipurpose sport courts: Outdoor and indoor courts are designed with high-performance surfaces for basketball, tennis, futsal and multi-use games. Slip-resistant coatings, accurate line markings and shock-absorbing underlays support player safety and consistent ball response.</li>
+            <li>Pathways and courtyards: Pedestrian routes and courtyards are planned to encourage walkability and social interaction, integrating lighting, drainage and landscaping. Surface finishes are selected for comfort, accessibility and visual harmony with surrounding architecture.</li>
+            <li>Jogging and cycling tracks: Continuous running and cycling tracks are engineered with resilient, low-maintenance surfaces tuned for traction and comfort. Colour-coded lanes and directional markings help manage different speeds and user groups safely within the same corridor.</li>
+        </ul>
+
+        <h3>EV charging bays - Key Benefits</h3>
+        <p>Coloured EV charging bays with clear line and symbol markings make your charging points highly visible, easy to use and safer for every driver. When clients contact TRAI for this service, they get a complete surfacing and marking package that works on asphalt, concrete or other prepared bases.</p>
+        <ul>
+            <li>Bright, dedicated floor colouring instantly distinguishes EV bays from regular parking, helping drivers find chargers quickly and reducing misuse of charging spaces.</li>
+            <li>High-contrast line marking clearly defines each bay, access aisle and no-parking zone, improving circulation and making it easier to enforce “EV-only while charging” rules.</li>
+            <li>Standardized EV symbols and special characters on the floor reinforce signage, so even first-time visitors understand the purpose and rules of the space at a glance.</li>
+            <li>Slip-resistant, UV-stable coatings are chosen to bond strongly to different substrates, giving long-lasting colour and markings that resist tire scuffing, oil, weather and frequent turning movements.</li>
+            <li>Clear differentiation between charging bays, pedestrian walkways and vehicle routes enhances safety around cables and parked vehicles, especially in busy mixed-use car parks.</li>
+            <li>Using TRAI for both the coloured surfacing and all on-top line/symbol marking ensures consistent design, material compatibility and a single point of responsibility for quality, maintenance advice and future expansion.</li>
+        </ul>
+
+        <h3>Multipurpose sport courts – Key benefits</h3>
+        <p>Multipurpose sport courts with epoxy flooring and professional line marking give facility owners a durable, flexible and clearly organized playing surface that works for many sports and activities. When clients contact TRAI for this service, they gain a single specialist team that handles both the performance floor and the precision markings on top of any suitable surface.</p>
+        <ul>
+            <li>Tough, seamless epoxy flooring resists impact, abrasion and moisture, so courts stay safe and attractive even under heavy shared use for basketball, futsal, volleyball and training.</li>
+            <li>Slip-resistant finishes and high-contrast game lines improve player safety, giving athletes reliable grip and clear boundaries during fast movements.</li>
+            <li>Accurate, multi-sport line layouts maximize limited space, with different colours for different games so one court can host several sports without confusion.</li>
+            <li>Professionally applied markings adhere well to epoxy and other court surfaces, delivering crisp edges and long-lasting visibility that reduces the need for frequent repainting.</li>
+            <li>Custom colours, logos and zone markings allow schools, clubs and developers to reflect their branding and create a premium, professional-looking facility.</li>
+            <li>Using TRAI for both flooring and line marking simplifies coordination, ensures system compatibility and provides a single point of responsibility for quality and aftercare.</li>
+        </ul>
+
+        <h3>Pathway and Courtyard – Key Benefits</h3>
+        <p>Pathway and courtyard floor colouring with professional line and character marking turns circulation spaces into clear, attractive and safer environments. When clients contact TRAI for this service, they gain a specialist team able to treat asphalt, concrete and other suitable surfaces with durable color and precision markings tailored to each site.</p>
+        <ul>
+            <li>Consistent color surfacing on pathways and courtyards improves wayfinding, helping people instantly see walking routes, gathering areas and vehicle zones.</li>
+            <li>High-contrast line marking on top of colored surfaces clarifies pedestrian lanes, service routes, parking bays and keep-clear areas, reducing confusion and conflict between users.</li>
+            <li>Special character, symbol and logo markings can highlight entrances, play zones, drop-off points or branding elements, making shared spaces more intuitive and engaging.</li>
+            <li>Systems are selected and applied to bond well with asphalt, concrete and other substrates, giving long-lasting color and markings that resist fading, peeling and heavy foot traffic.</li>
+            <li>Using one contractor for colouring and all types of line marking simplifies coordination and ensures that layouts, colours and symbols work together as a complete visual-guidance system.</li>
+        </ul>
+
+        <h3>Jogging and Cycling tracks – Key Benefits</h3>
+        <p>Coloured jogging and cycling tracks with clear line and symbol markings turn movement corridors into safe, attractive and intuitive routes that people enjoy using regularly. When clients contact TRAI for this service, they benefit from specialist installation on asphalt, concrete or other suitable bases, plus durable markings applied as a complete wayfinding system.</p>
+        <ul>
+            <li>Distinctive track colouring instantly separates jogging and cycling corridors from general pavements and roads, reducing conflicts between users and improving overall safety.</li>
+            <li>Slip-resistant, UV-stable coatings provide comfortable grip in wet and dry conditions while maintaining bright colour for years, even under strong sun and heavy use.</li>
+            <li>Directional arrows, lane lines and distance markers on top of the surface help regulate flow, support training programs and encourage users to complete longer routes.</li>
+            <li>Special characters and icons (such as runners, bikes, kids’ figures or accessibility symbols) make routes more inclusive and engaging for families, commuters and recreational users.</li>
+            <li>Systems are engineered to bond strongly to different substrates, so colour and markings resist peeling and abrasion on asphalt, concrete or other prepared surfaces.</li>
+            <li>Using TRAI for both surfacing and line marking ensures compatible materials, accurate setting-out and a single point of responsibility for performance, maintenance advice and future extensions.</li>
+        </ul>
+    </section>
+
+    <section id="epoxy">
+        <img src="https://images.unsplash.com/photo-1591899916510-d8eea9eb7b25?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZXBveHklMjBmbG9vcnxlbnwwfHwwfHx8MA%3D%3D" alt="Epoxy Flooring" class="section-image">
+        <h2>6. Epoxy Flooring & Coatings</h2>
+        <p><strong>Title: “Seamless Floors, Heavy-Duty Performance”</strong></p>
+        <p>Epoxy systems from TRAI Contracting transform concrete surfaces into seamless, high-performance floors that stand up to demanding use. These solutions combine durability, chemical resistance and design flexibility for industrial, commercial and public environments.</p>
+        <ul>
+            <li>Industrial epoxy coatings: High-build epoxies protect floors in warehouses, plants, workshops and logistics centers from abrasion, impact and chemical attack. Smooth, dust-free surfaces improve housekeeping, reflect light and support safe, efficient operations.</li>
+            <li>Decorative and commercial epoxy: Coloured, flake and self-levelling systems create a refined, contemporary look for showrooms, retail spaces, offices and public buildings. Bespoke colours, zoning and graphics can be incorporated to reinforce branding and guide foot traffic.</li>
+            <li>Anti-slip and safety systems: Textured finishes and aggregate-loaded topcoats are applied in wet, oily or sloped areas to reduce slip risk. Marked walkways, hazard zones and parking bays help organizations comply with safety standards and improve site legibility.</li>
+            <li>Maintenance, repair and upgrades: Existing epoxy and concrete floors are surveyed, prepared and refurbished to extend life and minimize downtime. TRAI Contracting works with clients to schedule phased upgrades, keeping facilities operational while quality improvements are delivered.</li>
+        </ul>
+
+        <h3>Epoxy Flooring – Key Benefits</h3>
+        <ul>
+            <li>Epoxy flooring delivers a strong, seamless and low-maintenance surface that performs exceptionally well in demanding commercial and industrial environments. It combines durability, chemical resistance and design flexibility, making it ideal for everything from warehouses and plant rooms to car parks and public facilities.</li>
+            <li>High durability and impact resistance to withstand heavy traffic, machinery and frequent vehicle loading without rapid wear.</li>
+            <li>Excellent chemical and stain resistance against oils, fuels, solvents and cleaning agents, protecting the underlying concrete slab.</li>
+            <li>Seamless, non-porous finish that is easy to clean, improves hygiene and reduces dust build-up compared with bare concrete or tile joints.</li>
+            <li>Enhanced safety through slip-resistant aggregates and the option to mark walkways, safety zones and parking bays directly into the floor.</li>
+            <li>Highly customizable appearance, available in a wide range of colours, gloss levels and decorative effects to match branding or zoning needs.</li>
+            <li>Long service life and reduced maintenance, lowering lifecycle costs and downtime for busy facilities.</li>
+        </ul>
+    </section>
+
+    <section id="additional-markings">
+        <img src="https://images.unsplash.com/photo-1647774660810-ee8eb8c600dd?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cm9hZCUyMG1hcmtpbmd8ZW58MHx8MHx8fDA%3D" alt="Additional Markings" class="section-image">
+        <h2>Road Marking/Pavement Markings</h2>
+        <ul>
+            <li>Road Marking/Pavement Marking (Cold Paint, Thermoplastic, Hot Paint, 2K MMA and 1K)</li>
+            <li>Airport Markings (Runways, Taxiways, Aprons)</li>
+            <li>Bus Stope Marking</li>
+            <li>School Zone Safety Markings.</li>
+            <li>EV Charging Station Marking.</li>
+            <li>Handicap Logo Marking</li>
+            <li>Hanger Marking (Flight, Helicopter, Drone)</li>
+            <li>Heliport/ Helipad Marking</li>
+            <li>Parking Number, Designated Lettering</li>
+            <li>Cycle track Safety Markings.</li>
+            <li>Jogging/ walking Track Marking</li>
+            <li>Sports Floor Markings.</li>
+            <li>Store/Warehouse Markings.</li>
+            <li>Driving School Special Marking</li>
+            <li>Football ground marking (In Natural grass)</li>
+            <li>Sadu and Traditional Markings</li>
+            <li>Parade ground markings</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 TRAI Contracting. All rights reserved. Let's make it simple.</p>
+    </footer>
+</body>
+</html>
